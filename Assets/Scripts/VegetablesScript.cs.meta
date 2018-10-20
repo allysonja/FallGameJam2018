@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 873341bd3b7cf22429f9d4b40a116c74
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - lettuce: {fileID: 21300008, guid: d6977f289bfe5374fa7f5bcc22b68654, type: 3}
+  - tomato: {fileID: 21300010, guid: d6977f289bfe5374fa7f5bcc22b68654, type: 3}
+  - hard_shell: {fileID: 21300002, guid: d6977f289bfe5374fa7f5bcc22b68654, type: 3}
+  - soft_shell: {fileID: 21300000, guid: d6977f289bfe5374fa7f5bcc22b68654, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
