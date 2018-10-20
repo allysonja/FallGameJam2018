@@ -20,8 +20,8 @@ public class BusScript : MonoBehaviour {
 			rb.velocity += Vector2.up * .05f;
 			speed += .005f;
 		}else{
-			speed -= .005f;
-			rb.velocity += Vector2.down * .02f;
+			//speed -= .005f;
+			//rb.velocity += Vector2.down * .02f;
 		}
 		if(Input.GetKey("s")){
 			rb.velocity += Vector2.down * .01f;
