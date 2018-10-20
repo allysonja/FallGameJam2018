@@ -6,6 +6,8 @@ public class BusScript : MonoBehaviour {
 	Rigidbody2D rb;
 	float speed;
 	Renderer rend;
+	public string customerTagName = "customer";
+	float time = 0f;
 	// Use this for initialization
 	void Start () {
 		speed = 50;
@@ -21,7 +23,7 @@ public class BusScript : MonoBehaviour {
 			speed += .005f;
 		}else{
 			speed -= .005f;
-			rb.velocity += Vector2.down * .02f;
+			//rb.velocity += Vector2.down * .02f;
 		}
 		if(Input.GetKey("s")){
 			rb.velocity += Vector2.down * .01f;
@@ -32,6 +34,29 @@ public class BusScript : MonoBehaviour {
 		}
 		if(Input.GetKey("d")){
 			rb.velocity += Vector2.right * .05f;
+		}
+
+		RaycastHit2D hitRight = Physics2D.Raycast(transform.position, new Vector2(1, 0), 1.2f);
+		RaycastHit2D hitLeft = Physics2D.Raycast(transform.position, new Vector2(-1, 0), 1.2f);
+		Debug.DrawRay(transform.position, new Vector2(1, 0) * 1.2f, Color.green);
+		Debug.DrawRay(transform.position, new Vector2(-1, 0) * 1.2f, Color.green);
+		if(hitRight.collider != null){
+			if(hitRight.transform.tag.Equals(customerTagName)){ //if car is a customer
+				time += Time.deltaTime;
+				if(time >= 1f){
+					Debug.Log("hit " + hitRight.collider.name + "!");
+					time = 0f;
+				}
+			}
+		}
+		if(hitLeft.collider != null){
+			if(hitLeft.transform.tag.Equals(customerTagName)){
+				time += Time.deltaTime;
+				if(time >= 1f){
+					Debug.Log("hit " + hitLeft.collider.name + "!");
+					time = 0f;
+				}
+			}
 		}
 	}
 }
