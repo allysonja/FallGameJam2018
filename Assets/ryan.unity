@@ -479,7 +479,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 811155272}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce216460e2a145e4384d7e7561855f66, type: 3}
+  m_Script: {fileID: 11500000, guid: ac20141a8ea89f94d956cd530f364ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &811155274
@@ -517,7 +517,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a80c729a51d81d34fa13d820b8c691ae, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e72322cc5382da741b29f4249b8b96d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1249,9 +1249,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1298978601}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b881e4ffc49debe4f881e2fc358f4224, type: 3}
+  m_Script: {fileID: 11500000, guid: 5aa0e196dd71e784e94a7873c22f4fa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  orderList: []
+  yOffset: -100
 --- !u!1 &1315051323
 GameObject:
   m_ObjectHideFlags: 0
@@ -2002,12 +2004,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 4796595d4b4584141bf8fd946e969f07, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d1cee22e0157ea240afcb9b43674efd9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2021,7 +2023,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1976070548}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f06d5240fe0c92242a4cc34d59b29b3f, type: 3}
+  m_Script: {fileID: 11500000, guid: db96f98966ecbaf4fafea50729a8fc23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1976070552
@@ -2032,9 +2034,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1976070548}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d1243d760bb4fd448db0f0ac46d544b, type: 3}
+  m_Script: {fileID: 11500000, guid: d7894d919fa8af742a3c4a45c18dc17c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientName: 
-  ingredient: {fileID: 1870236108312870, guid: 9076dad665668f142a6c82b4c1c23c10, type: 2}
+  ingredient: {fileID: 1870236108312870, guid: 6a1d61fefd6c9a04c9674f58b0dd11c6, type: 2}
   held: {fileID: 0}
