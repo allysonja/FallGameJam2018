@@ -407,8 +407,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoints: []
   canSpawn: 0
-  car: {fileID: 0}
-  customerCar: {fileID: 0}
+  car: {fileID: 1838197492303666, guid: 0ee54e46e84b40c46a840d067acad6c6, type: 2}
+  customerCar: {fileID: 1319750556589058, guid: b66d53b2e65ee0747a99e321e56b8bd9,
+    type: 2}
 --- !u!212 &515887290
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -480,7 +481,7 @@ GameObject:
   - component: {fileID: 811155278}
   - component: {fileID: 811155277}
   - component: {fileID: 811155276}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
