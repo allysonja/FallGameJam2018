@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Orders : MonoBehaviour {
+public class OrdersScript : MonoBehaviour {
 
 	public List<Taco> orderList = new List<Taco>();
-	public int yOffset = -100;
+	public int yOffset = 110;
+	public int yStart = 150;
 	int orderNum = 1;
 
 	// Use this for initialization
@@ -23,11 +24,11 @@ public class Orders : MonoBehaviour {
 
 		GameObject newOrder = new GameObject("Order" + orderNum);
 		newOrder.transform.SetParent(this.transform);
-		newOrder.transform.localPosition = new Vector3(400, yOffset * (orderList.Count - 1),0);
+		newOrder.transform.localPosition = new Vector3(450, yStart - (yOffset * orderList.Count),0);
 		newOrder.transform.localScale = new Vector3(1,1,1);
 
 		Text orderText = newOrder.AddComponent<Text>();
-		orderText.color = new Color(0f, 0f, 0f, 1f);
+		orderText.color = new Color(1f, 1f, 1f, 1f);
 		orderText.text = "Order " + orderNum + ":";
 		
 		orderText.font = Resources.GetBuiltinResource(typeof(Font), "Arial.ttf") as Font;

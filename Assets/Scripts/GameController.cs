@@ -28,7 +28,7 @@ public class GameController : MonoBehaviour {
 		 //Debug.Log(spawnRand);
 		 if (spawnRand < .01 && canSpawn){
 			int point = Random.Range(0,4);
-			Orders orders = GameObject.Find("Orders").GetComponent<Orders>();
+			OrdersScript orders = GameObject.Find("Orders").GetComponent<OrdersScript>();
 			if (Random.Range(0, 2) == 0 && orders.orderList.Count < 4) {
 				int orderNum = orders.AddOrder();
 				GameObject customer = Instantiate(customerCar, spawnPoints[point], gameObject.transform.rotation);
