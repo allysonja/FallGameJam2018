@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 325203812}
   m_Layer: 0
   m_Name: Beans
-  m_TagString: Untagged
+  m_TagString: Container
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -526,7 +526,7 @@ GameObject:
   - component: {fileID: 481997762}
   m_Layer: 0
   m_Name: HardShell
-  m_TagString: Untagged
+  m_TagString: Container
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -903,7 +903,7 @@ GameObject:
   - component: {fileID: 811155273}
   - component: {fileID: 811155277}
   - component: {fileID: 811155276}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1057,7 +1057,7 @@ GameObject:
   - component: {fileID: 908767924}
   m_Layer: 0
   m_Name: Burner1
-  m_TagString: Untagged
+  m_TagString: Burner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1158,7 +1158,7 @@ GameObject:
   - component: {fileID: 966322852}
   m_Layer: 0
   m_Name: Tomato
-  m_TagString: Untagged
+  m_TagString: Container
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1393,7 +1393,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b12c94a02f622a4a85f8c92e1b1b536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taco: {fileID: 0}
 --- !u!212 &1014337582
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1630,7 +1629,7 @@ GameObject:
   - component: {fileID: 1086708772}
   m_Layer: 0
   m_Name: Burner3
-  m_TagString: Untagged
+  m_TagString: Burner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1913,7 +1912,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1298978601}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fba11cd350f973f44bac63d7e06b6827, type: 3}
+  m_Script: {fileID: 11500000, guid: 5aa0e196dd71e784e94a7873c22f4fa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   orderList: []
@@ -1930,7 +1929,7 @@ GameObject:
   - component: {fileID: 1315051325}
   m_Layer: 0
   m_Name: Meat
-  m_TagString: Untagged
+  m_TagString: Container
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2213,7 +2212,7 @@ GameObject:
   - component: {fileID: 1664821855}
   m_Layer: 0
   m_Name: Burner2
-  m_TagString: Untagged
+  m_TagString: Burner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2448,7 +2447,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b12c94a02f622a4a85f8c92e1b1b536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taco: {fileID: 0}
 --- !u!212 &1735940517
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2593,7 +2591,7 @@ GameObject:
   - component: {fileID: 1862935662}
   m_Layer: 0
   m_Name: SoftShell
-  m_TagString: Untagged
+  m_TagString: Container
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2694,7 +2692,7 @@ GameObject:
   - component: {fileID: 1886741473}
   m_Layer: 0
   m_Name: Lettuce
-  m_TagString: Untagged
+  m_TagString: Container
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2792,6 +2790,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1976070549}
   - component: {fileID: 1976070550}
+  - component: {fileID: 1976070552}
   - component: {fileID: 1976070551}
   m_Layer: 0
   m_Name: Player
@@ -2808,7 +2807,7 @@ Transform:
   m_GameObject: {fileID: 1976070548}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.005, y: -0.005, z: -0.009765625}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 811155275}
   m_RootOrder: 0
@@ -2848,7 +2847,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: d1cee22e0157ea240afcb9b43674efd9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2870,6 +2869,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db96f98966ecbaf4fafea50729a8fc23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1976070552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1976070548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7894d919fa8af742a3c4a45c18dc17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientName: 
+  ingredient: {fileID: 1870236108312870, guid: 6a1d61fefd6c9a04c9674f58b0dd11c6, type: 2}
+  held: {fileID: 0}
 --- !u!1 &2026473252
 GameObject:
   m_ObjectHideFlags: 0
@@ -2914,7 +2927,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b12c94a02f622a4a85f8c92e1b1b536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taco: {fileID: 0}
 --- !u!212 &2026473255
 SpriteRenderer:
   m_ObjectHideFlags: 0
