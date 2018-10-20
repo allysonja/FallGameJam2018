@@ -402,14 +402,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 515887288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65b48074c805b7d4c971808af0e22b68, type: 3}
+  m_Script: {fileID: 11500000, guid: db7486ad6a08bd94f824afdeb6ccb2c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoints: []
-  canSpawn: 1
-  car: {fileID: 1838197492303666, guid: c41a2bbed01b01e4aace47a08ccdd062, type: 2}
-  customerCar: {fileID: 1319750556589058, guid: 4aab6af4dc908f44caeed08e8a5ddd19,
-    type: 2}
+  canSpawn: 0
+  car: {fileID: 0}
+  customerCar: {fileID: 0}
 --- !u!212 &515887290
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -523,7 +522,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 218d0010a6e977e469ffffc5c05aca21, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e72322cc5382da741b29f4249b8b96d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -620,7 +619,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 811155272}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 479ce782d8909b641be88929d6229f43, type: 3}
+  m_Script: {fileID: 11500000, guid: ac20141a8ea89f94d956cd530f364ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &908767922
@@ -1240,7 +1239,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1298978601}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae935b176f500534cb8be00dbd7352fe, type: 3}
+  m_Script: {fileID: 11500000, guid: 90232d91fa95e8349b96e7295a12f3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   orderList: []
@@ -2065,12 +2064,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 4b0876468702ffe4c97eac4fd09489e1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d1cee22e0157ea240afcb9b43674efd9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2084,6 +2083,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1976070548}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53288fe593bd2704c999d8952e600632, type: 3}
+  m_Script: {fileID: 11500000, guid: db96f98966ecbaf4fafea50729a8fc23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
