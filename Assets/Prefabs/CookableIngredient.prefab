@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212096213362309128}
   - component: {fileID: 114669544892886560}
   m_Layer: 0
-  m_Name: Meat
+  m_Name: CookableIngredient
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,8 +52,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67edca1c933fc784cb43b2724235e815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uncooked: {fileID: 21300004, guid: d6977f289bfe5374fa7f5bcc22b68654, type: 3}
-  cooked: {fileID: 21300012, guid: d6977f289bfe5374fa7f5bcc22b68654, type: 3}
+  meat_uncooked: {fileID: 0}
+  meat_cooked: {fileID: 0}
+  beans_uncooked: {fileID: 0}
+  beans_cooked: {fileID: 0}
 --- !u!212 &212096213362309128
 SpriteRenderer:
   m_ObjectHideFlags: 1
