@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212096213362309128}
   - component: {fileID: 114669544892886560}
   m_Layer: 0
-  m_Name: Meat
+  m_Name: CookableIngredient
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

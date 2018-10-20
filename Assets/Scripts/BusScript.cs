@@ -21,7 +21,7 @@ public class BusScript : MonoBehaviour {
 			speed += .005f;
 		}else{
 			speed -= .005f;
-			rb.velocity += Vector2.down * .02f;
+			//rb.velocity += Vector2.down * .02f;
 		}
 		if(Input.GetKey("s")){
 			rb.velocity += Vector2.down * .01f;
@@ -32,6 +32,17 @@ public class BusScript : MonoBehaviour {
 		}
 		if(Input.GetKey("d")){
 			rb.velocity += Vector2.right * .05f;
+		}
+
+		RaycastHit2D hitRight = Physics2D.Raycast(transform.position, new Vector2(1, 0), 1.2f);
+		RaycastHit2D hitLeft = Physics2D.Raycast(transform.position, new Vector2(-1, 0), 1.2f);
+		Debug.DrawRay(transform.position, new Vector2(1, 0) * 1.2f, Color.green);
+		Debug.DrawRay(transform.position, new Vector2(-1, 0) * 1.2f, Color.green);
+		if(hitRight.collider != null){
+			Debug.Log("hit " + hitRight.collider.name + "!");
+		}
+		if(hitLeft.collider != null){
+			Debug.Log("hit " + hitLeft.collider.name + "!");
 		}
 	}
 }
