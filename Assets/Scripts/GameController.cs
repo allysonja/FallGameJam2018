@@ -29,17 +29,14 @@ public class GameController : MonoBehaviour {
 		 if (spawnRand < .01 && canSpawn){
 			int point = Random.Range(0,4);
 			Orders orders = GameObject.Find("Orders").GetComponent<Orders>();
-			if (Random.Range(0, 2) == 0 && orders.orderList.Count < 1) {
+			if (Random.Range(0, 10) == 0 && orders.orderList.Count < 1) {
 				int orderNum = orders.AddOrder();
-				TacoScript tacos = GameObject.Find("Counter1").transform.GetChild(0).GetComponent<TacoScript>();
-				tacos.addIngredient("hard");
-				tacos.addIngredient(2);
-				GameObject customer = Instantiate(customerCar, spawnPoints[point], gameObject.transform.rotation);
+				GameObject customer = Instantiate(customerCar, spawnPoints[point] + new Vector3(0,20,0), gameObject.transform.rotation);
 				customer.GetComponent<CarScript>().orderNum = orderNum; 
-				Debug.Log("spawn customer car");
+				//Debug.Log("spawn customer car");
 			} else {
 				Instantiate(car, spawnPoints[point], gameObject.transform.rotation);
-				Debug.Log("spawn car");
+				//Debug.Log("spawn car");
 			}
 			canSpawn = false;
 			StartCoroutine(spawnWait());

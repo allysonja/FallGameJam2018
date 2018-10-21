@@ -22,7 +22,7 @@ public class CookableScript : MonoBehaviour {
 	void Update () {
 		// if object is on a burner
 		if (transform.parent.transform.tag == "Burner") {
-			Debug.Log(time);
+			//Debug.Log(time);
 			time += Time.deltaTime;
 			// if it has been on a burner for 10 seconds change sprite to cooked
 			if (time > 10 && time < 15) {

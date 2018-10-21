@@ -20,7 +20,7 @@ public class InteractionScript : MonoBehaviour {
 	public void getIngredient(RaycastHit2D hit){
 		ingredientName = hit.collider.transform.name;
 		if(hit.collider.transform.name == "Lettuce"){
-			held = Instantiate(ingredient, this.transform.position+ new Vector3(-.25f,0,0), transform.rotation);
+			held = Instantiate(ingredient, this.transform.position+ new Vector3(-.1f,0,0), transform.rotation);
 			held.transform.localScale = new Vector3(4,4,0);
 			held.transform.parent = this.gameObject.transform;
 			heldSR = held.GetComponent<SpriteRenderer>();
@@ -60,6 +60,50 @@ public class InteractionScript : MonoBehaviour {
 			held.transform.localScale = new Vector3(4,4,0);
 			held.transform.parent = this.gameObject.transform;
 			heldSR.sprite = held.GetComponent<VegetablesScript>().tomato;
+		}
+
+	}
+
+
+	public void addToTaco(GameObject taco){
+		TacoScript tacoS = taco.GetComponent<TacoScript>();
+		switch(ingredientName){
+			case("Meat"):
+				
+				if(held.GetComponent<CookableScript>().cooked){
+					tacoS.addIngredient(1);
+					Destroy(held);
+				}
+			break;
+			case("Beans"):
+				if(held.GetComponent<CookableScript>().cooked){
+					tacoS.addIngredient(0);
+					Destroy(held);
+				}
+			break;
+			case("Tomato"):
+					Debug.Log("tomates was got");
+					tacoS.addIngredient(3);
+				
+			break;
+			case("Lettuce"):
+				
+					tacoS.addIngredient(2);
+					Destroy(held);
+				
+			break;
+			case("HardShell"):
+				
+					tacoS.addIngredient("HARD");
+					Destroy(held);
+				
+			break;
+			case("SoftShell"):
+				
+					tacoS.addIngredient("SOFT");
+					Destroy(held);
+				
+			break;
 		}
 	}
 

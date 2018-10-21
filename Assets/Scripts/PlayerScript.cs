@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
 	float speed;
+	BusScript bus;
 	InteractionScript interS;
 	// Use this for initialization
 	void Start () {
 		speed = 1f;
 		interS = GetComponent<InteractionScript>();
-
+		bus = GameObject.Find("Bus").GetComponent<BusScript>();
 		
 	}
 	
@@ -42,21 +43,26 @@ public class PlayerScript : MonoBehaviour {
 		if(Input.GetKeyDown("u")){
 			RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, 0.2f);
 			if(hit.collider != null){
-				Debug.Log("hit " + hit.collider.name + "!");
+				//Debug.Log("hit " + hit.collider.name + "!");
 				if(hit.collider.transform.tag.Equals("Container") && interS.held == null){
 					interS.getIngredient(hit);
+				}
+				if(hit.collider.tag == "Counter" && interS != null){
+					interS.addToTaco(hit.collider.transform.GetChild(0).gameObject);
+					interS.held.transform.SetParent(hit.collider.transform);
 				}
 				if(hit.collider.transform.tag == "Burner"){
 					if(interS.held != null){
 						interS.held.transform.SetParent(hit.collider.transform);
-						interS.held.transform.position = hit.collider.transform.position;
+						interS.held.transform.position = hit.collider.transform.position +  new Vector3(.2f,-.15f,0);
+;
 						interS.held = null;
-						Debug.Log("this was run");
+						//Debug.Log("this was run");
 					}
 					else if(interS.held == null && hit.collider.transform.childCount != 0){
 						interS.held = hit.collider.transform.GetChild(0).transform.gameObject;
 						hit.collider.transform.GetChild(0).transform.SetParent(this.gameObject.transform);
-						Debug.Log("this was run too");
+						//Debug.Log("this was run too");
 					}
 				}
 				

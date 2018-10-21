@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Orders : MonoBehaviour {
-
+	public int yBase =150;
 	public List<Taco> orderList = new List<Taco>();
-	public int yOffset = -100;
+	public int yOffset = 110;
 	int orderNum = 1;
 
 	// Use this for initialization
 	void Start () {
-
+		
 	}
 	
 	// Update is called once per frame
@@ -23,11 +23,11 @@ public class Orders : MonoBehaviour {
 
 		GameObject newOrder = new GameObject("Order" + orderNum);
 		newOrder.transform.SetParent(this.transform);
-		newOrder.transform.localPosition = new Vector3(400, yOffset * (orderList.Count - 1),0);
+		newOrder.transform.localPosition = new Vector3(350, yBase + (yOffset * orderList.Count),0);
 		newOrder.transform.localScale = new Vector3(1,1,1);
 
 		Text orderText = newOrder.AddComponent<Text>();
-		orderText.color = new Color(0f, 0f, 0f, 1f);
+		orderText.color = new Color(1f, 1f, 1f, 1f);
 		orderText.text = "Order " + orderNum + ":";
 		
 		orderText.font = Resources.GetBuiltinResource(typeof(Font), "Arial.ttf") as Font;
@@ -93,7 +93,7 @@ public class Orders : MonoBehaviour {
 			if (removedOrder) {
 				GameObject shiftOrder = GameObject.Find("Order" + orderList[i].OrderNum);
 				shiftOrder.transform.localPosition = new Vector3(shiftOrder.transform.localPosition.x,
-				shiftOrder.transform.localPosition.y - yOffset,
+				shiftOrder.transform.localPosition.y + yOffset,
 				shiftOrder.transform.localPosition.z);	
 			}
 		}

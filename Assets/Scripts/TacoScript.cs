@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TacoScript : MonoBehaviour {
-
+public BusScript bus;
 public Taco taco;
 	void Start () {
 		taco = ScriptableObject.CreateInstance<Taco>();	
+		
 	}
 
 	public void addIngredient(int ingedient) {
